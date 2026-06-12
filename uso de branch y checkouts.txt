@@ -1,0 +1,176 @@
+C:\Users\pc5>cd..
+
+C:\Users>cd..
+
+C:\>gitcalcborrar
+"gitcalcborrar" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\>cd gitcalcborrar
+
+C:\gitcalcborrar>cd calc2026
+
+C:\gitcalcborrar\calc2026>git status
+On branch calctest
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+
+C:\gitcalcborrar\calc2026>git merge origin/calc.suma --no-edit
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+C:\gitcalcborrar\calc2026>git status
+On branch calctest
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+
+C:\gitcalcborrar\calc2026>git branch -a
+* calctest
+  e1.pedro
+  main
+  remotes/origin/1e.andres
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/calc.division
+  remotes/origin/calc.multiplicacion
+  remotes/origin/calc.resta
+  remotes/origin/calc.suma
+  remotes/origin/e1
+  remotes/origin/e1.pedro
+  remotes/origin/e2.dante
+  remotes/origin/e2.luciano
+  remotes/origin/e2.santino
+  remotes/origin/e3.angelina
+  remotes/origin/e3.lisandro
+  remotes/origin/e4.tomas
+  remotes/origin/eest1c73-patch-1
+  remotes/origin/eest1c73-patch-2
+  remotes/origin/main
+  remotes/origin/matias_fr
+
+C:\gitcalcborrar\calc2026>git merge calc.suma --no-edit
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+C:\gitcalcborrar\calc2026>git merge calc.resta --no-edit
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+C:\gitcalcborrar\calc2026>git merge calc.multiplicacion --no-edit
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+C:\gitcalcborrar\calc2026>git merge calc.division --no-edit
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+C:\gitcalcborrar\calc2026>git add .
+
+C:\gitcalcborrar\calc2026>git commit -m "hola"
+[calctest bffcaab] hola
+
+C:\gitcalcborrar\calc2026>git merge calc.suma --no-edit
+merge: calc.suma - not something we can merge
+
+Did you mean this?
+        origin/calc.suma
+
+C:\gitcalcborrar\calc2026>git merge calc.resta --no-edit
+merge: calc.resta - not something we can merge
+
+Did you mean this?
+        origin/calc.resta
+
+C:\gitcalcborrar\calc2026>git merge calc.multiplicacion --no-edit
+merge: calc.multiplicacion - not something we can merge
+
+Did you mean this?
+        origin/calc.multiplicacion
+
+C:\gitcalcborrar\calc2026>git merge calc.division --no-edit
+merge: calc.division - not something we can merge
+
+Did you mean this?
+        origin/calc.division
+
+C:\gitcalcborrar\calc2026>git merge origin/calc.suma --no-edit
+Already up to date.
+
+C:\gitcalcborrar\calc2026>git merge origin/calc.resta --no-edit
+Already up to date.
+
+C:\gitcalcborrar\calc2026>git merge origin/calc.multiplicacion --no-edit
+Merge made by the 'ort' strategy.
+ __pycache__/multiplicacion.cpython-313.pyc | Bin 0 -> 253 bytes
+ multiplicacion.py                          |   2 ++
+ 2 files changed, 2 insertions(+)
+ create mode 100644 __pycache__/multiplicacion.cpython-313.pyc
+ create mode 100644 multiplicacion.py
+
+C:\gitcalcborrar\calc2026>git merge origin/calc.division --no-edit
+Merge made by the 'ort' strategy.
+ __pycache__/division.cpython-313.pyc | Bin 0 -> 294 bytes
+ division.py                          |   3 +++
+ 2 files changed, 3 insertions(+)
+ create mode 100644 __pycache__/division.cpython-313.pyc
+ create mode 100644 division.py
+
+C:\gitcalcborrar\calc2026>python main.py
+=== CALCULADORA DEL EQUIPO   ===
+
+sumar(10, 5) = 15
+restar(10, 5) = 5
+multiplicar(10, 5) = 50
+dividir(10, 5) = None
+
+C:\gitcalcborrar\calc2026>git status
+On branch calctest
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        __pycache__/division.cpython-314.pyc
+        __pycache__/multiplicacion.cpython-314.pyc
+        __pycache__/resta.cpython-314.pyc
+        __pycache__/suma.cpython-314.pyc
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\gitcalcborrar\calc2026>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+C:\gitcalcborrar\calc2026>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        __pycache__/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\gitcalcborrar\calc2026>git merge origin/calctest --no-edit
+merge: origin/calctest - not something we can merge
+
+C:\gitcalcborrar\calc2026>git merge calctest --no-edit
+Updating 008cf83..a18cf11
+Fast-forward
+ __pycache__/division.cpython-313.pyc       | Bin 0 -> 294 bytes
+ __pycache__/multiplicacion.cpython-313.pyc | Bin 0 -> 253 bytes
+ __pycache__/resta.cpython-313.pyc          | Bin 0 -> 239 bytes
+ __pycache__/suma.cpython-313.pyc           | Bin 0 -> 237 bytes
+ division.py                                |   3 +++
+ multiplicacion.py                          |   2 ++
+ resta.py                                   |   2 ++
+ suma.py                                    |   2 ++
+ 8 files changed, 9 insertions(+)
+ create mode 100644 __pycache__/division.cpython-313.pyc
+ create mode 100644 __pycache__/multiplicacion.cpython-313.pyc
+ create mode 100644 __pycache__/resta.cpython-313.pyc
+ create mode 100644 __pycache__/suma.cpython-313.pyc
+ create mode 100644 division.py
+ create mode 100644 multiplicacion.py
+ create mode 100644 resta.py
+ create mode 100644 suma.py
+
+C:\gitcalcborrar\calc2026>
